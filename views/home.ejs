@@ -6,15 +6,15 @@
     </p>
     <% posts.forEach(function(post){ %>
         <h2>
-            <%=post.title%>
+            <%=post.blogTitle%>
         </h2>
-        <% if(post.body.length>100){ %>
+        <% if(post.blogBody.length>100){ %>
             <p>
-                <%=post.body.substring(0,100)+"..."%><a href="/posts/<%=post.title%>">Read more</a>
+                <%=post.blogBody.substring(0,100)+"..."%><a href="/posts/<%=post.blogTitle%>">Read more</a>
             </p>
             <%} else {%>
                 <p>
-                    <%=post.body%><a href="/posts/<%=post.title%>">&nbsp;Read more</a>
+                    <%=post.blogBody%>
                 </p>
 
                 <% }}); %>
